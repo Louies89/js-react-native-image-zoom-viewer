@@ -1,0 +1,107 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "react-native-image-zoom-viewer@2.1.0",
+        "scope": null,
+        "escapedName": "react-native-image-zoom-viewer",
+        "name": "react-native-image-zoom-viewer",
+        "rawSpec": "2.1.0",
+        "spec": "2.1.0",
+        "type": "version"
+      },
+      "E:\\npmPackage"
+    ]
+  ],
+  "_from": "react-native-image-zoom-viewer@2.1.0",
+  "_id": "react-native-image-zoom-viewer@2.1.0",
+  "_inCache": true,
+  "_location": "/react-native-image-zoom-viewer",
+  "_nodeVersion": "9.5.0",
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/react-native-image-zoom-viewer_2.1.0_1521544638416_0.09076138864179906"
+  },
+  "_npmUser": {
+    "name": "ascoders",
+    "email": "576625322@qq.com"
+  },
+  "_npmVersion": "5.7.1",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "react-native-image-zoom-viewer@2.1.0",
+    "scope": null,
+    "escapedName": "react-native-image-zoom-viewer",
+    "name": "react-native-image-zoom-viewer",
+    "rawSpec": "2.1.0",
+    "spec": "2.1.0",
+    "type": "version"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/react-native-image-zoom-viewer/-/react-native-image-zoom-viewer-2.1.0.tgz",
+  "_shasum": "b84b469770c5efe59d04f42bcaf202291a49127c",
+  "_shrinkwrap": null,
+  "_spec": "react-native-image-zoom-viewer@2.1.0",
+  "_where": "E:\\npmPackage",
+  "author": {
+    "name": "ascoders"
+  },
+  "bugs": {
+    "url": "https://github.com/ascoders/react-native-image-viewer/issues"
+  },
+  "dependencies": {
+    "react-native-image-pan-zoom": "^2.1.0"
+  },
+  "description": "react native image viewer,大图浏览",
+  "devDependencies": {
+    "@types/react": "*",
+    "@types/react-native": "*",
+    "ascoders-tslint-config": "^1.0.2",
+    "react": "*",
+    "react-native": "*",
+    "tslint": "^5.8.0",
+    "typescript": "^2.4.2"
+  },
+  "directories": {},
+  "dist": {
+    "integrity": "sha512-wfdMrD2aPZRP8Z63jfrP8uaHb2wAf969Tc1n40VXy9rILbiYgVXV9LEIncUQAp6WReDt/XVKqlE93GkcZ/GQAQ==",
+    "shasum": "b84b469770c5efe59d04f42bcaf202291a49127c",
+    "tarball": "https://registry.npmjs.org/react-native-image-zoom-viewer/-/react-native-image-zoom-viewer-2.1.0.tgz",
+    "fileCount": 18,
+    "unpackedSize": 96049
+  },
+  "gitHead": "b495afed91d836abacf5d7bbd58ecf5d889dc92a",
+  "homepage": "https://github.com/ascoders/react-native-image-viewer#readme",
+  "keywords": [
+    "image-viewer"
+  ],
+  "license": "MIT",
+  "main": "built/index.js",
+  "maintainers": [
+    {
+      "name": "ascoders",
+      "email": "576625322@qq.com"
+    }
+  ],
+  "name": "react-native-image-zoom-viewer",
+  "optionalDependencies": {},
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*"
+  },
+  "readme": "## Show Cases\n\n> Swiper image\n\n![1.gif](https://cloud.githubusercontent.com/assets/7970947/21086300/388dedfc-c056-11e6-955e-0a2a0b541f7f.gif)\n\n> Zoom while sliding\n\n![2.gif](https://cloud.githubusercontent.com/assets/7970947/21086323/7355face-c056-11e6-8d68-384000d41d47.gif)\n\n## Getting Started\n\n### Installation\n\n```bash\nnpm i react-native-image-zoom-viewer --save\n```\n\n### Basic Usage\n\n* Install create-react-native-app first\n\n```bash\n$ npm install -g create-react-native-app\n```\n\n* Initialization of a react-native project\n\n```bash\n$ create-react-native-app AwesomeProject\n```\n\n* Then, edit `AwesomeProject/App.js`, like this:\n\n```typescript\nimport { Modal } from 'react-native';\nimport ImageViewer from 'react-native-image-zoom-viewer';\n\nconst images = [{\n    url: 'https://avatars2.githubusercontent.com/u/7970947?v=3&s=460'\n}, {\n    url: 'https://avatars2.githubusercontent.com/u/7970947?v=3&s=460'\n}, {\n    url: 'https://avatars2.githubusercontent.com/u/7970947?v=3&s=460'\n}]\n\nexport default class App extends React.Component {\n    render: function() {\n        return (\n            <Modal visible={true} transparent={true}>\n                <ImageViewer imageUrls={images}/>\n            </Modal>\n        )\n    }\n}\n```\n\n### Props\n\n| parameter              | type                                                                                   | required | description                                                                                                                                                                                                                          | default                                                   |\n| :--------------------- | :------------------------------------------------------------------------------------- | :------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------- |\n| imageUrls              | array                                                                                  | yes      | Image Source                                                                                                                                                                                                                         |                                                           |\n| enableImageZoom        | boolean                                                                                | no       | Enable image zoom                                                                                                                                                                                                                    | `true`                                                    |\n| onShowModal            | function<br><br>`(content?: JSX.Element) => void`                                      | no       | The callback for show modal                                                                                                                                                                                                          | `() => {}`                                                |\n| onCancel               | function<br><br>`() => void`                                                           | no       | The callback for cancel modal                                                                                                                                                                                                        | `() => {}`                                                |\n| flipThreshold          | number                                                                                 | no       | Swipe threshold of the next page                                                                                                                                                                                                     | `80`                                                      |\n| maxOverflow            | number                                                                                 | no       | The X position maximum, that current page can slide to the next page                                                                                                                                                                 | `300`                                                     |\n| index                  | number                                                                                 | no       | Init index of images                                                                                                                                                                                                                 | `0`                                                       |\n| failImageSource        | string, object<br><br>`{uri: string}`                                                  | no       | placeholder for fail                                                                                                                                                                                                                 | `''`                                                      |\n| loadingRender          | function<br><br>`() => React.ReactElement<any>`                                        | no       | placeholder for loading                                                                                                                                                                                                              | `() => null`                                              |\n| onSaveToCamera         | function<br><br>`(index?: number => void`                                              | no       | The callback for save to camera                                                                                                                                                                                                      | `() => {}`                                                |\n| onChange               | function<br><br>`(index?: number => void`                                              | no       | When the image changed                                                                                                                                                                                                               | `() => {}`                                                |\n| saveToLocalByLongPress | boolean                                                                                | no       | Enable save to camera when long press                                                                                                                                                                                                | `true`                                                    |\n| onClick                | function<br><br>`(onCancel?: function) => void`                                        | no       | Onclick                                                                                                                                                                                                                              | `(onCancel) => {onCancel()}`                              |\n| onDoubleClick          | function<br><br>`(onCancel?: function) => void`                                        | no       | OnDoubleClick                                                                                                                                                                                                                        | `(onCancel) => {onCancel()}`                              |\n| onSave                 | function<br><br>`(url: string) => void`                                                | no       | The picture is saved to the local method, if you write this method will not call the system default method for Android does not support saveToCameraRoll remote picture, you can call this callback in Android call native interface |                                                           |\n| renderHeader           | function<br><br>`() => React.ReactElement<any>`                                        | no       | Custom header                                                                                                                                                                                                                        | `() => null`                                              |\n| renderFooter           | function<br><br>`() => React.ReactElement<any>`                                        | no       | Custom footer                                                                                                                                                                                                                        | `() => null`                                              |\n| renderIndicator        | function<br><br>`(currentIndex?: number, allSize?) => React.ReactElement<any>`: number | no       | Custom indicator                                                                                                                                                                                                                     | `(currentIndex, allSize) => currentIndex + \"/\" + allSize` |\n| renderArrowLeft        | function<br><br>`() => React.ReactElement<any>`                                        | no       | Custom left arrow                                                                                                                                                                                                                    | `() => null`                                              |\n| renderArrowRight       | function<br><br>`() => React.ReactElement<any>`                                        | no       | Cutsom right arrow                                                                                                                                                                                                                   | `() => null`                                              |\n| onSwipeDown            | function<br><br>`() => void`                                                           | no       | Callback for swipe down                                                                                                                                                                                                              | `() => null`                                              |\n| footerContainerStyle   | object<br><br>`{someStyle: someValue}`                                                 | no       | custom style props for container that will be holding your footer that you pass                                                                                                                                                      | `bottom: 0, position: \"absolute\", zIndex: 9999`           |\n\n## Development pattern\n\n### Step 1, run TS listener\n\nAfter clone this repo, then:\n\n```bash\nnpm install\nnpm start\n```\n\n### Step 2, run demo\n\n```bash\ncd demo\nnpm install\nnpm start\n```\n\nThen, scan the QR, use your [expo app](https://expo.io./).\n\n### Dependence\n\nDepend on `react-native-image-pan-zoom`: https://github.com/ascoders/react-native-image-zoom\n",
+  "readmeFilename": "readme.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ascoders/react-native-image-viewer.git"
+  },
+  "scripts": {
+    "prepare": "rm -rf built && tsc",
+    "start": "tsc -w --outDir demo/built"
+  },
+  "types": "src/index.ts",
+  "version": "2.1.0"
+}
